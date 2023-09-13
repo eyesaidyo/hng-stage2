@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  font-family: "DM Sans-Bold", Helvetica;
+}
+.wick {
+  background-image: url(./assets/wick.svg);
+  height: 600px;
+}
+.description-box {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 6%;
+  margin-top: 50px;
+}
+
+.description-box .text-wrapper {
+  color: #ffffff;
+  font-family: "DM Sans-Bold", Helvetica;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 56px;
+  margin-top: -1px;
+  position: relative;
+  width: 404px;
+}
+
+.description-box .rating {
+  height: 17px;
+  position: relative;
+  width: 184px;
+}
+
+.description-box .IMDB {
+  align-items: center;
+  display: inline-flex;
+  gap: 10px;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.description-box .img {
+  height: 17px;
+  object-fit: cover;
+  position: relative;
+  width: 35px;
+}
+
+.description-box .div {
+  color: #ffffff;
+  font-family: "DM Sans-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 12px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.description-box .rotten-tomatoes {
+  align-items: center;
+  display: inline-flex;
+  gap: 10px;
+  left: 135px;
+  position: absolute;
+  top: 0;
+}
+
+.description-box .pngitem {
+  height: 17px;
+  object-fit: cover;
+  position: relative;
+  width: 16px;
+}
+
+.description-box .john-wick-is-on-the {
+  color: #ffffff;
+  font-family: "DM Sans-Medium", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: relative;
+  width: 302px;
+}
+
+.description-box .button {
+  all: unset;
+  align-items: center;
+  background-color: #c21e56;
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  padding: 6px 16px;
+  position: relative;
+}
+
+.description-box .play-instance {
+  height: 20px !important;
+  position: relative !important;
+  width: 20px !important;
+}
+
+.description-box .watch-trailer {
+  color: var(--white);
+  font-family: "DM Sans-Bold", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+.button {
+  all: unset;
+  align-items: center;
+  color: #c21e56;
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: inline-flex;
+  gap: 8px;
+  padding: 6px 16px;
+  position: relative;
+  border: 5px solid #c21e56;
+}
+
+.button .play-instance {
+  height: 20px !important;
+  position: relative !important;
+  width: 20px !important;
+}
+
+.button .watch-trailer {
+  color: white;
+  font-family: "DM Sans-Bold", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+.myHeader {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+.myLogoWrap {
+  display: flex;
+  color: #ffffff;
+  font-family: "DM Sans-Bold", Helvetica;
+  font-weight: 700;
+  align-items: center;
+  gap: 20px;
+}
+.myLogo {
+  width: 50px;
+}
+
+.search-screen {
+  align-items: center;
+  border: 2px solid;
+  border-color: white;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 10px;
+  position: relative;
+  width: 525px;
+}
+
+.search-screen .text-wrapper {
+  color: white;
+  font-family: "DM Sans-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.search-screen .search-instance {
+  height: 16px !important;
+  position: relative !important;
+  width: 60%;
+}
+.myInput {
+  border: none;
+
+  padding: 6px 10px;
+  width: 525px;
+  background-color: transparent;
+  color: white;
+  color: white;
+  font-family: "DM Sans-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+.myInput::placeholder {
+  color: #ffffff;
+}
+.myInput:focus {
+  border: none;
+  outline: none;
+}
+.sign-in {
+  color: #ffffff;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.menub {
+  background-image: url(./assets/menu-b.svg);
+  width: 36px;
+  height: 36px;
+}
+.menu {
+  display: inline;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
