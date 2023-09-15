@@ -20,7 +20,7 @@ export const MovieDetails = () => {
         setMovie(res)
         // setIsLoading(false)
       })
-      .catch(err => { console.log(err) })
+      .catch(err => { console.log('Error:', err) })
       .finally(() => {
         setIsLoading(false)
       })
@@ -37,13 +37,13 @@ export const MovieDetails = () => {
             </div>
 
             <div className="movie-details">
-              <span data-testid='movie-title'>{movie.title}</span>
-              <span data-testid='movie-release-date'>{movie.release_date}</span>
-              <span data-testid='movie-runtime'>{movie.runtime}</span>
+              <span data-testid="movie-title">{movie.title}</span>
+              <span data-testid="movie-release-date">{movie.release_date}</span>
+              <span data-testid="movie-runtime">{movie.runtime}</span>
               <img src={star} alt="favorite" className={isLiked ? 'star' : null} onClick={() => { setIsLiked(!isLiked) }} />
             </div>
             <div className="movie-details">
-              <p data-testid='movie-overview'>{movie.overview}</p>
+              <p data-testid="movie-overview">{movie.overview}</p>
             </div>
           </div>
       }

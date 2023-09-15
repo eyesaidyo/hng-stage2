@@ -30,7 +30,7 @@ export const Home = () => {
         setMovies(res.results.slice(0, 9))
         setIsLoading(false)
       })
-
+      .catch(err => { console.log('Error:', err) })
   }, [searchVal])
   return (
     <>
@@ -61,16 +61,16 @@ export const Home = () => {
       </div>
       {isLoading ? <h1 className='loading'>Loading</h1> : <h2>Featured Movies</h2>}
       <div className='cards-container'>
+        {isLoading && <h1 className='loading'>Loading</h1>}
         {
-          isLoading ? <h1 className='loading'>Loading</h1> :
-            filteredMovies.map((movie, idx) => <Link to={`/${movie.id}`} className='link'> <Card
-              data-testid='movie-card'
-              img={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-              title={movie.title}
-              releaseDate={movie.release_date}
-              key={idx}
-            />
-            </Link>)
+          filteredMovies.map((movie, idx) => <Link to={`/${movie.id}`} className='link'> <Card
+            data-testid='movie-card'
+            img={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+            title={movie.title}
+            releaseDate={movie.release_date}
+            key={idx}
+          />
+          </Link>)
         }
       </div>
 
