@@ -234,3 +234,40 @@
   margin-left: auto;
   margin-right: auto;
 }
+.card-poster {
+  width: 250px;
+  height: 370px;
+}
+.cards-container {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  row-gap: 115px;
+}
+h2 {
+  margin: 30px;
+  font-size: 2rem;
+}
+.poster-wrap {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 700px;
+}
+.movie-details {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.backdrop {
+  width: 100%;
+}
+.star {
+  fill: #c21e56;
+  background-color: #c21e56;
+}
