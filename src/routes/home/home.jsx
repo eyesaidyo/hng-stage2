@@ -62,14 +62,15 @@ export const Home = () => {
       {isLoading ? <h1 className='loading'>Loading</h1> : <h2>Featured Movies</h2>}
       <div className='cards-container'>
         {
-
-          filteredMovies.map((movie, idx) => <Link to={`/${movie.id}`} className='link'> <Card
-            img={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-            title={movie.title}
-            releaseDate={movie.release_date}
-            key={idx}
-          />
-          </Link>)
+          isLoading ? <h1 className='loading'>Loading</h1> :
+            filteredMovies.map((movie, idx) => <Link to={`/${movie.id}`} className='link'> <Card
+              data-testid='movie-card'
+              img={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+              title={movie.title}
+              releaseDate={movie.release_date}
+              key={idx}
+            />
+            </Link>)
         }
       </div>
 

@@ -4,6 +4,7 @@ import menu from '../assets/menu.svg'
 import { useContext, useState } from 'react';
 import { MovieContext } from '../contexts/movieContext';
 import { SearchContext } from '../contexts/searchContext';
+import { LoadingContext } from '../contexts/loadingContext';
 
 
 
@@ -16,9 +17,11 @@ const SearchScreen = () => {
 };
 export const Header = () => {
   const { searchVal, setSearchVal } = useContext(SearchContext)
-
+  const { isLoading, setIsLoading } = useContext(LoadingContext)
   const handleChange = (e) => {
+    setIsLoading(true)
     setSearchVal(e.target.value)
+    setIsLoading(false)
   }
   return (
     <div className='myHeader'>
