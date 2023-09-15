@@ -2,6 +2,9 @@
   margin: 0;
   font-family: "DM Sans-Bold", Helvetica;
 }
+body {
+  width: 100%;
+}
 .wick {
   background-image: url(./assets/wick.svg);
   height: 600px;
@@ -238,12 +241,25 @@
   width: 250px;
   height: 370px;
 }
+.link {
+  text-decoration: none;
+  color: black;
+}
 .cards-container {
   padding: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   row-gap: 115px;
+}
+@media (max-width: 800px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .myLogoWrap,
+  .sign-in {
+    display: none;
+  }
 }
 h2 {
   margin: 30px;
@@ -253,16 +269,17 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  width: 700px;
+  width: 70%;
 }
 .movie-details {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  width: 700px;
+  width: 70%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
 }
 .backdrop {
   width: 100%;

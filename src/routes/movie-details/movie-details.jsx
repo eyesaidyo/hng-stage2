@@ -12,7 +12,7 @@ export const MovieDetails = () => {
       .then(res => setMovie(res))
   }, [])
   return (
-    <>
+    <div className="details-page">
       <div className="poster-wrap">
         <img alt="poster" src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} className="backdrop" />
       </div>
@@ -26,6 +26,6 @@ export const MovieDetails = () => {
       <div className="movie-details">
         <p data-testid='movie-overview'>{movie.overview}</p>
       </div>
-    </>
+    </div>
   )
 }

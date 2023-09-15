@@ -55,7 +55,7 @@ export const Home = () => {
       <h2>Featured Movies</h2>
       <div className='cards-container'>
         {
-          filteredMovies.map((movie, idx) => <Link to={`/${movie.id}`}> <Card
+          filteredMovies.map((movie, idx) => <Link to={`/${movie.id}`} className='link'> <Card
             img={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
             title={movie.title}
             releaseDate={movie.release_date}
