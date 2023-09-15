@@ -8,26 +8,33 @@ import { Card } from '../../components/movieCard'
 import { MovieContext } from '../../contexts/movieContext'
 import { SearchContext } from '../../contexts/searchContext'
 import { Link } from 'react-router-dom'
+import { LoadingContext } from '../../contexts/loadingContext'
 
 
 export const Home = () => {
   const { movies, setMovies } = useContext(MovieContext)
   const { searchVal, } = useContext(SearchContext)
+  const { isLoading, setIsLoading } = useContext(LoadingContext)
   const filterParam = new RegExp(searchVal, 'i')
   const filteredMovies = movies.filter(mov => filterParam.test(mov.title))
   console.log(searchVal)
 
   useEffect(() => {
     fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=a260692c0d621b7427901892eb3562d0')
-      .then(res => res.json())
       .then(res => {
-        console.log(res)
+        setIsLoading(true)
+        return res.json()
+      })
+      .then(res => {
+        // console.log(res)
         setMovies(res.results.slice(0, 9))
+        setIsLoading(false)
       })
 
   }, [searchVal])
   return (
     <>
+
       <div className="wick">
         <Header />
         <div className="description-box">
@@ -52,9 +59,10 @@ export const Home = () => {
           </button>
         </div>
       </div>
-      <h2>Featured Movies</h2>
+      {isLoading ? <h1 className='loading'>Loading</h1> : <h2>Featured Movies</h2>}
       <div className='cards-container'>
         {
+
           filteredMovies.map((movie, idx) => <Link to={`/${movie.id}`} className='link'> <Card
             img={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
             title={movie.title}
@@ -64,6 +72,7 @@ export const Home = () => {
           </Link>)
         }
       </div>
+
     </>
   )
 }

@@ -9,6 +9,7 @@ import { Home } from './routes/home/home.jsx';
 import { MovieDetails } from './routes/movie-details/movie-details.jsx';
 import { MovieProvider } from './contexts/movieContext.jsx';
 import { SearchProvider } from './contexts/searchContext.jsx';
+import { LoadingProvider } from './contexts/loadingContext.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -24,11 +25,12 @@ const router = createBrowserRouter([
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <MovieProvider>
-      <SearchProvider>
-        <RouterProvider router={router} />
-      </SearchProvider>
-    </MovieProvider>
-
+    <LoadingProvider>
+      <MovieProvider>
+        <SearchProvider>
+          <RouterProvider router={router} />
+        </SearchProvider>
+      </MovieProvider>
+    </LoadingProvider>
   </React.StrictMode>,
 )

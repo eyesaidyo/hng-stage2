@@ -288,3 +288,9 @@ h2 {
   fill: #c21e56;
   background-color: #c21e56;
 }
+.loading {
+  color: #c21e56;
+  margin: 50px;
+  text-align: center;
+  font-size: 3rem;
+}
