@@ -28,7 +28,7 @@ export const Home = () => {
       })
       .then(res => {
         // console.log(res)
-        setMovies(res.results.slice(0, 9))
+        setMovies(res.results.slice(0, 10))
         setIsLoading(false)
       })
       .catch(err => { console.log('Error:', err) })
