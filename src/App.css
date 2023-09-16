@@ -294,3 +294,37 @@ h2 {
   text-align: center;
   font-size: 3rem;
 }
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.socials,
+.tos {
+  display: flex;
+  gap: 25px;
+  padding: 10px;
+  font-weight: 600;
+}
+.footer p {
+  margin: 10px 0;
+}
+.details-wrap .myLogoWrap {
+  color: black;
+}
+.details-wrap {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+}
+.details-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  border-right: solid;
+}
+.nav-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-left: 30px;
+}

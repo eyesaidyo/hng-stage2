@@ -9,6 +9,7 @@ import { MovieContext } from '../../contexts/movieContext'
 import { SearchContext } from '../../contexts/searchContext'
 import { Link } from 'react-router-dom'
 import { LoadingContext } from '../../contexts/loadingContext'
+import { Footer } from '../../components/footer'
 
 
 export const Home = () => {
@@ -73,7 +74,7 @@ export const Home = () => {
           </Link>)
         }
       </div>
-
+      <Footer />
     </>
   )
 }

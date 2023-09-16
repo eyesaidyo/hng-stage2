@@ -15,6 +15,10 @@ const SearchScreen = () => {
 
   );
 };
+export const MovieBox = () => <div className='myLogoWrap'>
+  <img className='myLogo' src={tv} />
+  <h1>MovieBox</h1>
+</div>
 export const Header = () => {
   const { searchVal, setSearchVal } = useContext(SearchContext)
   const { isLoading, setIsLoading } = useContext(LoadingContext)
@@ -25,10 +29,7 @@ export const Header = () => {
   }
   return (
     <div className='myHeader'>
-      <div className='myLogoWrap'>
-        <img className='myLogo' src={tv} />
-        <h1>MovieBox</h1>
-      </div>
+      <MovieBox />
       <div className="search-screen">
         <input type='text' className='myInput' placeholder='What do you want to watch?' onChange={handleChange}
           value={searchVal}

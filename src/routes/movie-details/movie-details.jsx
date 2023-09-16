@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router"
 import star from '../../assets/star.svg'
 import { LoadingContext } from "../../contexts/loadingContext"
+import { DetailsNav } from "../../components/details-nav"
 
 export const MovieDetails = () => {
   const { id } = useParams()
@@ -26,7 +27,8 @@ export const MovieDetails = () => {
       })
   }, [])
   return (
-    <>
+    <div className="details-wrap">
+      <DetailsNav />
       {
         isLoading ?
           <h1 className="loading">Loading...</h1>
@@ -47,6 +49,6 @@ export const MovieDetails = () => {
             </div>
           </div>
       }
-    </>
+    </div>
   )
 }
